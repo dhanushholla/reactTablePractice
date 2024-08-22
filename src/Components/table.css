@@ -1,0 +1,14 @@
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  margin: 1rem;
+  button {
+    align-content: center;
+    margin: 0.2rem;
+  }
+  td,
+  th,
+  tr {
+    border-style: solid;
+  }
+}

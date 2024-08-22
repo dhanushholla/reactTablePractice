@@ -1,0 +1,78 @@
+.wrapper {
+  color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  padding: 1rem;
+  margin: 2rem 1rem;
+  border: 2px solid whitesmoke;
+  background-color: lightgray;
+  box-shadow: 2px 12px 20px 2px black;
+  text-align: left;
+}
+.titleWrapper {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.8rem;
+}
+.imgWrapper {
+  width: 100%;
+  height: 60%;
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+.misc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+}
+
+.wrapper:hover {
+  margin: 4rem;
+  background-color: #356d65;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.1);
+  ~ .wrapper:not(:hover) {
+    opacity: 0.3;
+  }
+}
+.sub {
+  width: 95%;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: black;
+}
+.carousel-track {
+  display: flex;
+  width: calc(300px * 4);
+  animation: scroll 10s linear infinite;
+}
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100vw;
+  height: 40rem;
+}
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
